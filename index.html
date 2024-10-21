@@ -1,122 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido Sexsible</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-image: url('https://i.pinimg.com/originals/ac/ac/d2/acacd2935b6595bb0ca68e64386548ed.gif'); /* URL de la imagen de fondo */
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed;
-            background-repeat: no-repeat; /
-        }
-        .container {
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            color: white; 
-        }
-        #startScreen {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: url('https://larepublica.cronosmedia.glr.pe/original/2022/04/09/6251c8ce50944b184e0af84c.jpg'); /* Cambia la URL por la imagen de fondo que desees */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
+            height: 100vh;
+            justify-content: space-between;
+            background-color: #abd4fd; /* Color de fondo suave */
+            color: #333; /* Color del texto principal */
         }
-        #startButton {
-            padding: 15px 30px;
-            font-size: 24px;
-            background-color: rgb(204, 0, 255);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-top: 20px;
-            position: absolute;  /* Permite posicionar el botón libremente */
-            bottom: 20px;        /* Fija el botón a 20px del borde inferior */
-            left: 50%;           /* Centra horizontalmente el botón */
-            transform: translateX(-50%); /* Asegura que el botón esté perfectamente centrado */
-}
-        /* Estilos para el mensaje de la pantalla de inicio */
-        #startMessage {
-            color: rgb(0, 0, 0);
-            font-size: 25px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-align: left; 
-            width: 38%; 
-            margin-left: 0; 
-            position: absolute; 
-            left: 0; 
-            top: 210px; 
-            padding-left: 100px; 
-}
+
+        #warning {
+            background-color: #f6c3c7; /* Fondo de advertencia */
+            color: #721c24; /* Color del texto de advertencia */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px; /* Bordes redondeados */
+            border: 1px solid #f5c6cb; /* Borde de advertencia */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            display: inline-block;
+            width: 80%; /* Ancho responsivo */
+            max-width: 600px; /* Máximo ancho */
+        }
+
+        #redirectButton {
+            padding: 15px 30px; /* Aumentar el tamaño del botón */
+            background-color: #007bff; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            text-decoration: none; /* Quitar subrayado */
+            border-radius: 5px; /* Bordes redondeados */
+            margin: 20px;
+            display: inline-block; /* Para centrar */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+
+        #redirectButton:hover {
+            background-color: #0056b3; /* Color al pasar el mouse */
+        }
+
+        footer {
+            background-color: #007bff; /* Color de fondo del footer */
+            color: white; /* Color del texto del footer */
+            padding: 10px 0; /* Espaciado */
+            text-align: center;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        /* Estilos adicionales para mejorar la presentación */
+        h1 {
+            font-size: 2em; /* Tamaño de fuente grande */
+            margin: 20px 0; /* Espaciado vertical */
+            color: #333; /* Color del título */
+        }
     </style>
-
-    <link rel="stylesheet" href="styles.css">
-    <title>TAQDCT</title>
-    <audio autoplay loop>
-        <source src="https://www.dropbox.com/scl/fi/jy35szde81zsk9r2tei5t/Soda-Stereo-Tr-tame-Suavemente-Official-Audio.mp3?rlkey=qecaijs2nokfecmudpfsu94ne&st=f2ttuvte&dl=1" type="audio/mpeg">
-    </audio>
-
 </head>
 <body>
-      <!-- Pantalla de inicio -->
-      <div id="startScreen">
-        <div id="startMessage">Si estas aqui, es porque de alguna forma 
-            lograste cautivarme con tu linda forma de ser; por lo tanto, 
-            eres una persona muy importante y especial para mi, quiero que
-            de alguna manera estes involucrada en mi vida y aunque tengas muchas dudas
-            ahora mismo, quiero despejarlas todas a mi manera, entregandote todo
-            de mi y expresandote todo el cariño que te tengo, el tiempo me dará la razón.
-
-            Creo que esta de más decirte lo mucho que me gustas, por eso tengo algo que decirte....
-        </div>
-        <button id="startButton">Picameeee :3</button>
-    </div>
-    
-    <div class="container">
-        <div id="gifContainer">
-            <img id="gifContainerImg" src="https://i.pinimg.com/originals/ec/83/14/ec831462bc022cc8f41d586408405dc7.gif" alt="Cerati Inicio">
-        </div>
-        <div id="happyGifContainer" style="display: none;">
-            <img src="https://i.pinimg.com/736x/b7/5f/d8/b75fd8bf513d21960955f84a14bcc1c4.jpg" alt="Cerati xd" style="width: 50%; height: 50%;">
-        </div>
-        <div id="happyGifContainer2" style="display: none;">
-            <img src="https://i.pinimg.com/originals/ab/b7/1c/abb71c89f61a1771879a58c767b5987e.gif" alt="Cerati xd" style="width: 50%; height: 50%;">
-        </div>
-        <div id="happyGifContainer3" style="display: none;">
-            <img src="https://i.pinimg.com/736x/b7/5f/d8/b75fd8bf513d21960955f84a14bcc1c4.jpg" alt="Cerati xd" style="width: 50%; height: 50%;">
-        </div>
-        <div id="happyGifContainer4" style="display: none;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVM1iFKfY1ZZ1PPJcTDrqpuKXfWQmOY3Rv_K9nxie3o4dayWJvgJz5KK150IM3-yb-oc&usqp=CAU0" alt="Cerati xd" style="width: 70%; height: 70%;">
-        </div>
-        <div id="sadGifContainer" style="display: none;">
-            <img src="https://i.imgur.com/Ry6ocLs.png" alt="cerati sad" style="width: 50%; height: 50%;">
-        </div>
-        <div id="sadGifContainer1" style="display: none;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvs119iyhiWu250vvkeB-B8epjQW0Xj1N7JmMo1sVZ2jqe_AXKeqtYDx3sS_2HN_nm6E&usqp=CAU" alt="cerati sad" style="width: 50%; height: 50%;">
-        </div>
-        <div id="sadGifContainer2" style="display: none;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkojPKIWHDwCljsdSZc3L1XHW9VPr0efsdeQ&s" alt="cerati sad" style="width: 50%; height: 50%;">
-        </div>
-        
-        <h1 id="question">¿Quieres ser oficialmente mi propietaria(novia)?</h1>
-        <div id="messageContainer" style="display: none;"></div>
-
-        <button id="siBtn">Sí</button>
-        <button id="noBtn">Ño</button>
-        
+    <!-- Aviso de advertencia -->
+    <div id="warning">
+        <strong>Advertencia:</strong> El siguiente contenido de esta página puede no ser apto para algunas personas. Por favor, procede con cautela y bajo su resposabilidad.
     </div>
 
-    <script src="script.js"></script>
+    <!-- Botón que lleva a index.html -->
+    <a href="intro.html" id="redirectButton">Tócate digo digo... tócame</a>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Todos los derechos reservados Noah tu terror ekisde.
+    </footer>
 </body>
 </html>
